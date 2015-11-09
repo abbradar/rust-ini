@@ -69,7 +69,6 @@ fn escape_str(s: &str) -> String {
             ';' => escaped.push_str("\\;"),
             '#' => escaped.push_str("\\#"),
             '=' => escaped.push_str("\\="),
-            ':' => escaped.push_str("\\:"),
             '\u{0080}' ... '\u{FFFF}' =>
                 escaped.push_str(&format!("\\x{:04x}", c as isize)[..]),
 
